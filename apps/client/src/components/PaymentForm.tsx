@@ -8,7 +8,7 @@ import { useRouter } from "next/navigation";
 
 const PaymentForm = () => {
     const { register, handleSubmit, formState: { errors } } = useForm<PaymentFormInputs>({
-        resolver: zodResolver(paymentFormSchema),
+        resolver: zodResolver(paymentFormSchema as any),
     });
 
     const router = useRouter();
