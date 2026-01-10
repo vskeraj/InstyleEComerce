@@ -39,3 +39,14 @@ yarn-error.log*
 # typescript
 # *.tsbuildinfo
 # next-env.d.ts
+
+# Create .env file for client
+@"
+# Next.js Configuration
+NEXT_PUBLIC_API_URL=http://localhost:4000
+NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY=your_stripe_publishable_key
+NEXT_PUBLIC_APP_URL=http://localhost:3000
+
+# Environment
+NODE_ENV=development
+"@ | Out-File -FilePath "C:\Users\Admin\Desktop\WEB-project\InstyleEComerce\apps\client\.env" -Encoding utf8

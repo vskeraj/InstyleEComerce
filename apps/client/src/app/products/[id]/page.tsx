@@ -21,16 +21,14 @@ const product: ProductType = {
 };
 
 export const generateMetadata = async ({
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   params,
 }: {
-  params: { id: string };
+  params: Promise<{ id: string }>;
 }) => {
-  // TODO:get the product from db
-  // TEMPORARY
+  const { id } = await params; // (mund edhe mos me e përdor, por le të jetë korrekt)
   return {
     title: product.name,
-    describe: product.description,
+    description: product.description, // ✅ also fix: "describe" -> "description"
   };
 };
 
