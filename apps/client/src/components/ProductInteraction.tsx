@@ -1,12 +1,11 @@
 "use client";
 
-import {ProductType} from "@/types"
-import { useRouter, usePathname, useSearchParams } from "next/navigation";
-import { useState } from "react";
-import { Minus, Plus, ShoppingCart } from "lucide-react";
 import useCartStore from "@/stores/cartStore";
+import { ProductType } from "@/types";
+import { Minus, Plus, ShoppingCart } from "lucide-react";
+import { usePathname, useRouter, useSearchParams } from "next/navigation";
+import { useState } from "react";
 import { toast } from "react-toastify";
-
 
 const ProductInteraction = ({
   product,

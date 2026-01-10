@@ -53,7 +53,7 @@ const Navbar = () => {
         <DropdownMenu>
           <DropdownMenuTrigger>
             <Avatar>
-              <AvatarImage src="https://cdn.brandfetch.io/iduTZevGwu/w/512/h/512/theme/dark/logo.png?c=1bxid64Mup7aczewSAYMX&t=1709430087556" />
+              <AvatarImage src="https://avatars.githubusercontent.com/u/1486366" />
               <AvatarFallback>CN</AvatarFallback>
             </Avatar>
           </DropdownMenuTrigger>

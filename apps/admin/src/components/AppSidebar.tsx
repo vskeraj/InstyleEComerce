@@ -36,7 +36,7 @@ import {
   DropdownMenuTrigger,
 } from "./ui/dropdown-menu";
 import { Sheet, SheetTrigger } from "./ui/sheet";
-import AddOrder from "./AddOrder"
+import AddOrder from "./AddOrder";
 import AddUser from "./AddUser";
 import AddCategory from "./AddCategory";
 import AddProduct from "./AddProduct";
@@ -78,7 +78,7 @@ const AppSidebar = () => {
             <SidebarMenuButton asChild>
               <Link href="/">
                 <Image src="/logo.png" alt="logo" width={20} height={20} />
-                <span>Instyle</span>
+                <span>INSTYLE</span>
               </Link>
             </SidebarMenuButton>
           </SidebarMenuItem>

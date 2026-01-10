@@ -50,7 +50,6 @@ const EditUser = () => {
       city: "New York",
     },
   });
-
   return (
     <SheetContent>
       <SheetHeader>
@@ -111,7 +110,7 @@ const EditUser = () => {
                 name="address"
                 render={({ field }) => (
                   <FormItem>
-                     <FormLabel>Address</FormLabel>
+                    <FormLabel>Address</FormLabel>
                     <FormControl>
                       <Input {...field} />
                     </FormControl>
@@ -122,7 +121,7 @@ const EditUser = () => {
                   </FormItem>
                 )}
               />
-               <FormField
+              <FormField
                 control={form.control}
                 name="city"
                 render={({ field }) => (

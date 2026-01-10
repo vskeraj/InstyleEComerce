@@ -1,273 +1,183 @@
-import { User, columns } from "./columns";
-import { DataTable } from "./data-table";
+import CardList from "@/components/CardList";
+import { Badge } from "@/components/ui/badge";
+import {
+  Breadcrumb,
+  BreadcrumbItem,
+  BreadcrumbLink,
+  BreadcrumbList,
+  BreadcrumbPage,
+  BreadcrumbSeparator,
+} from "@/components/ui/breadcrumb";
+import {
+  HoverCard,
+  HoverCardContent,
+  HoverCardTrigger,
+} from "@/components/ui/hover-card";
+import { Progress } from "@/components/ui/progress";
+import { BadgeCheck, Candy, Citrus, Shield } from "lucide-react";
+import { Sheet, SheetTrigger } from "@/components/ui/sheet";
+import { Button } from "@/components/ui/button";
+import EditUser from "@/components/EditUser";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import AppLineChart from "@/components/AppLineChart";
 
-const getData = async (): Promise<User[]> => {
-  return [
-    {
-      id: "728ed521",
-      avatar: "/users/1.png",
-      status: "active",
-      fullName: "John Doe",
-      email: "johndoe@gmail.com",
-    },
-    {
-      id: "728ed522",
-      avatar: "/users/2.png",
-      status: "active",
-      fullName: "Jane Doe",
-      email: "janedoe@gmail.com",
-    },
-    {
-      id: "728ed523",
-      avatar: "/users/3.png",
-      status: "inactive",
-      fullName: "Mike Galloway",
-      email: "mikegalloway@gmail.com",
-    },
-    {
-      id: "728ed524",
-      avatar: "/users/4.png",
-      status: "inactive",
-      fullName: "Minerva Robinson",
-      email: "minerbarobinson@gmail.com",
-    },
-    {
-      id: "728ed525",
-      avatar: "/users/5.png",
-      status: "active",
-      fullName: "Mable Clayton",
-      email: "mableclayton@gmail.com",
-    },
-    {
-      id: "728ed526",
-      avatar: "/users/6.png",
-      status: "active",
-      fullName: "Nathan McDaniel",
-      email: "nathanmcdaniel@gmail.com",
-    },
-    {
-      id: "728ed527",
-      avatar: "/users/7.png",
-      status: "active",
-      fullName: "Myrtie Lamb",
-      email: "myrtielamb@gmail.com",
-    },
-    {
-      id: "728ed528",
-      avatar: "/users/8.png",
-      status: "active",
-      fullName: "Leona Bryant",
-      email: "leonabryant@gmail.com",
-    },
-    {
-      id: "728ed529",
-      avatar: "/users/9.png",
-      status: "inactive",
-      fullName: "Aaron Willis",
-      email: "aaronwillis@gmail.com",
-    },
-    {
-      id: "728ed52a",
-      avatar: "/users/10.png",
-      status: "active",
-      fullName: "Joel Keller",
-      email: "joelkeller@gmail.com",
-    },
-    {
-      id: "728ed52b",
-      avatar: "/users/11.png",
-      status: "active",
-      fullName: "Daniel Ellis",
-      email: "danielellis@gmail.com",
-    },
-    {
-      id: "728ed52c",
-      avatar: "/users/12.png",
-      status: "active",
-      fullName: "Gordon Kennedy",
-      email: "gordonkennedy@gmail.com",
-    },
-    {
-      id: "728ed52d",
-      avatar: "/users/13.png",
-      status: "inactive",
-      fullName: "Emily Hoffman",
-      email: "emilyhoffman@gmail.com",
-    },
-    {
-      id: "728ed52e",
-      avatar: "/users/14.png",
-      status: "active",
-      fullName: "Jeffery Garrett",
-      email: "jefferygarrett@gmail.com",
-    },
-    {
-      id: "728ed52f",
-      avatar: "/users/15.png",
-      status: "active",
-      fullName: "Ralph Baker",
-      email: "ralphbaker@gmail.com",
-    },
-    {
-      id: "728ed52g",
-      avatar: "/users/16.png",
-      status: "inactive",
-      fullName: "Seth Fields",
-      email: "sethfields@gmail.com",
-    },
-    {
-      id: "728ed52h",
-      avatar: "/users/17.png",
-      status: "active",
-      fullName: "Julia Webb",
-      email: "juliawebb@gmail.com",
-    },
-    {
-      id: "728ed52i",
-      avatar: "/users/18.png",
-      status: "active",
-      fullName: "Gary Banks",
-      email: "garybanks@gmail.com",
-    },
-    {
-      id: "728ed52j",
-      avatar: "/users/19.png",
-      status: "inactive",
-      fullName: "Flora Chambers",
-      email: "florachambers@gmail.com",
-    },
-    {
-      id: "728ed52k",
-      avatar: "/users/20.png",
-      status: "active",
-      fullName: "Steve Hanson",
-      email: "stevehanson@gmail.com",
-    },
-    {
-      id: "728ed52l",
-      avatar: "/users/21.png",
-      status: "active",
-      fullName: "Lola Robinson",
-      email: "lolarobinson@gmail.com",
-    },
-    {
-      id: "728ed52m",
-      avatar: "/users/22.png",
-      status: "active",
-      fullName: "Ethel Waters",
-      email: "ethelwaters@gmail.com",
-    },
-    {
-      id: "728ed52n",
-      avatar: "/users/23.png",
-      status: "inactive",
-      fullName: "Grace Edwards",
-      email: "graceedwards@gmail.com",
-    },
-    {
-      id: "728ed52o",
-      avatar: "/users/24.png",
-      status: "active",
-      fullName: "Sallie Wong",
-      email: "salliewong@gmail.com",
-    },
-    {
-      id: "728ed52p",
-      avatar: "/users/25.png",
-      status: "active",
-      fullName: "Bryan Gutierrez",
-      email: "bryangutierrez@gmail.com",
-    },
-    {
-      id: "728ed52q",
-      avatar: "/users/26.png",
-      status: "active",
-      fullName: "Erik Rice",
-      email: "erikrice@gmail.com",
-    },
-    {
-      id: "728ed52r",
-      avatar: "/users/27.png",
-      status: "active",
-      fullName: "Jordan Atkins",
-      email: "jordanatkins@gmail.com",
-    },
-    {
-      id: "728ed52s",
-      avatar: "/users/28.png",
-      status: "inactive",
-      fullName: "Bill Brewer",
-      email: "billbrewer@gmail.com",
-    },
-    {
-      id: "728ed52t",
-      avatar: "/users/29.png",
-      status: "active",
-      fullName: "Edwin Morris",
-      email: "edwinmorris@gmail.com",
-    },
-    {
-      id: "728ed52u",
-      avatar: "/users/30.png",
-      status: "active",
-      fullName: "Harold Becker",
-      email: "haroldbecker@gmail.com",
-    },
-    {
-      id: "728ed52v",
-      avatar: "/users/31.png",
-      status: "active",
-      fullName: "Hannah Rodriguez",
-      email: "hannahrodriguez@gmail.com",
-    },
-    {
-      id: "728ed52w",
-      avatar: "/users/32.png",
-      status: "active",
-      fullName: "Zachary Beck",
-      email: "zacharybeck@gmail.com",
-    },
-    {
-      id: "728ed52x",
-      avatar: "/users/33.png",
-      status: "inactive",
-      fullName: "Frances Potter",
-      email: "francespotter@gmail.com",
-    },
-    {
-      id: "728ed52y",
-      avatar: "/users/34.png",
-      status: "active",
-      fullName: "Raymond Murray",
-      email: "raymondmurray@gmail.com",
-    },
-    {
-      id: "728ed52z",
-      avatar: "/users/35.png",
-      status: "active",
-      fullName: "Adam Sherman",
-      email: "adamsherman@gmail.com",
-    },
-    {
-      id: "728ed521f",
-      avatar: "/users/36.png",
-      status: "active",
-      fullName: "Anne Cruz",
-      email: "annecruz@gmail.com",
-    },
-  ];
-};
-
-const UsersPage = async () => {
-  const data = await getData();
+const SingleUserPage = () => {
   return (
     <div className="">
-      <div className="mb-8 px-4 py-2 bg-secondary rounded-md">
-        <h1 className="font-semibold">All Users</h1>
+      <Breadcrumb>
+        <BreadcrumbList>
+          <BreadcrumbItem>
+            <BreadcrumbLink href="/">Dashboard</BreadcrumbLink>
+          </BreadcrumbItem>
+          <BreadcrumbSeparator />
+          <BreadcrumbItem>
+            <BreadcrumbLink href="/users">Users</BreadcrumbLink>
+          </BreadcrumbItem>
+          <BreadcrumbSeparator />
+          <BreadcrumbItem>
+            <BreadcrumbPage>John Doe</BreadcrumbPage>
+          </BreadcrumbItem>
+        </BreadcrumbList>
+      </Breadcrumb>
+      {/* CONTAINER */}
+      <div className="mt-4 flex flex-col xl:flex-row gap-8">
+        {/* LEFT */}
+        <div className="w-full xl:w-1/3 space-y-6">
+          {/* USER BADGES CONTAINER */}
+          <div className="bg-primary-foreground p-4 rounded-lg">
+            <h1 className="text-xl font-semibold">User Badges</h1>
+            <div className="flex gap-4 mt-4">
+              <HoverCard>
+                <HoverCardTrigger>
+                  <BadgeCheck
+                    size={36}
+                    className="rounded-full bg-blue-500/30 border-1 border-blue-500/50 p-2"
+                  />
+                </HoverCardTrigger>
+                <HoverCardContent>
+                  <h1 className="font-bold mb-2">Verified User</h1>
+                  <p className="text-sm text-muted-foreground">
+                    This user has been verified by the admin.
+                  </p>
+                </HoverCardContent>
+              </HoverCard>
+              <HoverCard>
+                <HoverCardTrigger>
+                  <Shield
+                    size={36}
+                    className="rounded-full bg-green-800/30 border-1 border-green-800/50 p-2"
+                  />
+                </HoverCardTrigger>
+                <HoverCardContent>
+                  <h1 className="font-bold mb-2">Admin</h1>
+                  <p className="text-sm text-muted-foreground">
+                    Admin users have access to all features and can manage
+                    users.
+                  </p>
+                </HoverCardContent>
+              </HoverCard>
+              <HoverCard>
+                <HoverCardTrigger>
+                  <Candy
+                    size={36}
+                    className="rounded-full bg-yellow-500/30 border-1 border-yellow-500/50 p-2"
+                  />
+                </HoverCardTrigger>
+                <HoverCardContent>
+                  <h1 className="font-bold mb-2">Awarded</h1>
+                  <p className="text-sm text-muted-foreground">
+                    This user has been awarded for their contributions.
+                  </p>
+                </HoverCardContent>
+              </HoverCard>
+              <HoverCard>
+                <HoverCardTrigger>
+                  <Citrus
+                    size={36}
+                    className="rounded-full bg-orange-500/30 border-1 border-orange-500/50 p-2"
+                  />
+                </HoverCardTrigger>
+                <HoverCardContent>
+                  <h1 className="font-bold mb-2">Popular</h1>
+                  <p className="text-sm text-muted-foreground">
+                    This user has been popular in the community.
+                  </p>
+                </HoverCardContent>
+              </HoverCard>
+            </div>
+          </div>
+          {/* USER CARD CONTAINER */}
+          <div className="bg-primary-foreground p-4 rounded-lg space-y-2">
+            <div className="flex items-center gap-2">
+              <Avatar className="size-12">
+                <AvatarImage src="https://avatars.githubusercontent.com/u/1486366" />
+                <AvatarFallback>JD</AvatarFallback>
+              </Avatar>
+              <h1 className="text-xl font-semibold">John Doe</h1>
+            </div>
+            <p className="text-sm text-muted-foreground">
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vel
+              voluptas distinctio ab ipsa commodi fugiat labore quos veritatis
+              cum corrupti sed repudiandae ipsum, harum recusandae ratione ipsam
+              in, quis quia.
+            </p>
+          </div>
+          {/* INFORMATION CONTAINER */}
+          <div className="bg-primary-foreground p-4 rounded-lg">
+            <div className="flex items-center justify-between">
+              <h1 className="text-xl font-semibold">User Information</h1>
+              <Sheet>
+                <SheetTrigger asChild>
+                  <Button>Edit User</Button>
+                </SheetTrigger>
+                <EditUser />
+              </Sheet>
+            </div>
+            <div className="space-y-4 mt-4">
+              <div className="flex flex-col gap-2 mb-8">
+                <p className="text-sm text-muted-foreground">
+                  Profile completion
+                </p>
+                <Progress value={66} />
+              </div>
+              <div className="flex items-center gap-2">
+                <span className="font-bold">Full name:</span>
+                <span>John Doe</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <span className="font-bold">Email:</span>
+                <span>john.doe@gmail.com</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <span className="font-bold">Phone:</span>
+                <span>+1 234 5678</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <span className="font-bold">Address:</span>
+                <span>123 Main St</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <span className="font-bold">City:</span>
+                <span>New York</span>
+              </div>
+            </div>
+            <p className="text-sm text-muted-foreground mt-4">
+              Joined on 2025.01.01
+            </p>
+          </div>
+        </div>
+        {/* RIGHT */}
+        <div className="w-full xl:w-2/3 space-y-6">
+          
+          {/* CHART CONTAINER */}
+          <div className="bg-primary-foreground p-4 rounded-lg">
+            <h1 className="text-xl font-semibold">User Activity</h1>
+            <AppLineChart />
+          </div>
+        </div>
       </div>
-      <DataTable columns={columns} data={data} />
     </div>
   );
 };
 
-export default UsersPage;
+export default SingleUserPage;

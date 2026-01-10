@@ -10,7 +10,7 @@ const product: ProductType = {
     "Lorem ipsum dolor sit amet consect adipisicing elit lorem ipsum dolor sit.",
   description:
     "Lorem ipsum dolor sit amet consect adipisicing elit lorem ipsum dolor sit. Lorem ipsum dolor sit amet consect adipisicing elit lorem ipsum dolor sit. Lorem ipsum dolor sit amet consect adipisicing elit lorem ipsum dolor sit.",
-  price: 39.9,
+  price: 59.9,
   sizes: ["xs", "s", "m", "l", "xl"],
   colors: ["gray", "purple", "green"],
   images: {
@@ -21,6 +21,7 @@ const product: ProductType = {
 };
 
 export const generateMetadata = async ({
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   params,
 }: {
   params: { id: string };
@@ -34,6 +35,7 @@ export const generateMetadata = async ({
 };
 
 const ProductPage = async ({
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   params,
   searchParams,
 }: {
