@@ -23,7 +23,7 @@ const config: runtime.GetPrismaClientConfig = {
       "value": "prisma-client"
     },
     "output": {
-      "value": "/Users/vesaskeraj/Desktop/Projects/InstyleEComerce/packages/product-db/generated/prisma",
+      "value": "C:\\Users\\Admin\\Desktop\\WEB-project\\InstyleEComerce\\packages\\product-db\\generated\\prisma",
       "fromEnvVar": null
     },
     "config": {
@@ -32,12 +32,12 @@ const config: runtime.GetPrismaClientConfig = {
     "binaryTargets": [
       {
         "fromEnvVar": null,
-        "value": "darwin-arm64",
+        "value": "windows",
         "native": true
       }
     ],
     "previewFeatures": [],
-    "sourceFilePath": "/Users/vesaskeraj/Desktop/Projects/InstyleEComerce/packages/product-db/prisma/schema.prisma",
+    "sourceFilePath": "C:\\Users\\Admin\\Desktop\\WEB-project\\InstyleEComerce\\packages\\product-db\\prisma\\schema.prisma",
     "isCustomOutput": true
   },
   "relativePath": "../../prisma",
