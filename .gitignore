@@ -36,3 +36,16 @@ yarn-error.log*
 # Misc
 .DS_Store
 *.pem
+
+# Prisma engines / generated binaries
+#/generated/prisma/
+#/.prisma/
+#/query_engine-*.node
+#/libquery_engine-*.node
+
+#Prisma engines / generated binaries
+#packages//generated/prisma/
+#packages//.prisma/
+#/query_engine-*.node
+#/libquery_engine-.node
+#**/.dll.node
