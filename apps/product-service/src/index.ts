@@ -35,8 +35,8 @@ app.get("/test", shouldBeUser, (req, res) => {
   });
 });
 
-app.use("/products", productRouter);
-app.use("/categories", categoryRouter);
+app.use("/api/v1/products", productRouter);
+app.use("/api/v1/categories", categoryRouter);
 
 app.use((err: any, req: Request, res: Response, next: NextFunction) => {
   console.log(err);

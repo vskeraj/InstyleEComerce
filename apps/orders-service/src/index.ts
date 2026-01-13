@@ -8,14 +8,14 @@ const fastify = Fastify({
 
 fastify.register(clerkPlugin);
 
-fastify.get("/health", (request, reply) => {
+fastify.get("/api/v1/health", (request, reply) => {
   return reply.status(200).send({
     status: "ok",
     uptime: process.uptime(),
     timestamp: Date.now(),
   });
 });
-fastify.get("/test", { preHandler: shouldBeUser }, (request, reply) => {
+fastify.get("/api/v1/test", { preHandler: shouldBeUser }, (request, reply) => {
   return reply.status(200).send({
     message: "Orders service authenticated",
     userId: request.userId,

@@ -8,7 +8,7 @@ const app = new Hono();
 
 app.use("*", clerkMiddleware());
 
-app.get("/health", (c) => {
+app.get("/api/v1/health", (c) => {
   return c.json({
     status: "ok",
     uptime: process.uptime(),
@@ -16,7 +16,7 @@ app.get("/health", (c) => {
   });
 });
 
-app.get("/test", shouldBeUser, async (c) => {
+app.get("/api/v1/test", shouldBeUser, async (c) => {
   return c.json({
     message: "Payment service authenticated",
     userId: c.get("userId"),
