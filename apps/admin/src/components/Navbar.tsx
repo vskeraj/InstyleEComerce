@@ -53,7 +53,7 @@ const Navbar = () => {
         <DropdownMenu>
           <DropdownMenuTrigger>
             <Avatar>
-              <AvatarImage src="https://avatars.githubusercontent.com/u/1486366" />
+              <AvatarImage src="https://www.pikpng.com/pngl/m/80-805523_default-avatar-svg-png-icon-free-download-264157.png" />
               <AvatarFallback>CN</AvatarFallback>
             </Avatar>
           </DropdownMenuTrigger>
