@@ -4,14 +4,14 @@ import { clerkMiddleware } from "@hono/clerk-auth";
 import { shouldBeUser } from "./middleware/authMiddleware.js";
 const app = new Hono();
 app.use("*", clerkMiddleware());
-app.get("/health", (c) => {
+app.get("/api/v1/health", (c) => {
     return c.json({
         status: "ok",
         uptime: process.uptime(),
         timestamp: Date.now(),
     });
 });
-app.get("/test", shouldBeUser, async (c) => {
+app.get("/api/v1/test", shouldBeUser, async (c) => {
     return c.json({
         message: "Payment service authenticated",
         userId: c.get("userId"),

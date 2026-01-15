@@ -133,3 +133,25 @@ Learn more about the power of Turborepo:
 - [Filtering](https://turborepo.com/docs/crafting-your-repository/running-tasks#using-filters)
 - [Configuration Options](https://turborepo.com/docs/reference/configuration)
 - [CLI Usage](https://turborepo.com/docs/reference/command-line-reference)
+
+## API Documentation
+
+This project uses **Requestly** for API documentation and testing instead of traditional Swagger/OpenAPI files.
+
+### Why Requestly?
+
+- **Live Testing**: All endpoints are tested and validated during development
+- **Comprehensive Documentation**: Request/response bodies, headers, and error cases are documented in Requestly collections
+- **Team Collaboration**: Easy sharing and collaboration on API testing
+- **Environment Management**: Multiple environments (dev, staging, prod) supported
+
+### Where to Find API Documentation
+
+API documentation is maintained in Requestly collections and includes:
+- All REST endpoints with HTTP methods
+- Complete request/response examples
+- Error handling and status codes
+- Authentication requirements
+- Request headers and parameters
+
+Access the Requestly collections through your team workspace or import the provided collection files.

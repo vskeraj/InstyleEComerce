@@ -4,6 +4,7 @@ import { clerkMiddleware } from "@clerk/express";
 import { shouldBeAdmin } from "./middleware/authMiddleware.js";
 import userRoute from "./routes/user.route";
 import { producer } from "./utils/kafka.js";
+import { securityMiddleware, auditLogger } from "@repo/security-middleware";
 
 const app = express();
 app.use(
@@ -14,6 +15,8 @@ app.use(
 );
 app.use(express.json());
 app.use(clerkMiddleware());
+app.use(...securityMiddleware);
+app.use(auditLogger);
 
 app.get("/health", (req: Request, res: Response) => {
   return res.status(200).json({

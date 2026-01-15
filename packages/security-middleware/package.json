@@ -1,0 +1,5 @@
+{"name": "@repo/security-middleware",
+ "version": "1.0.0", 
+ "type": "module",
+  "main": "index.js", 
+  "scripts": {"check-types": "tsc --noEmit"}, "dependencies": {"helmet": "^7.1.0", "express-rate-limit": "^7.1.5"}, "devDependencies": {"@repo/typescript-config": "workspace:*", "@types/express": "^5.0.3"}, "exports": {".": "./index.js"}}

@@ -1,0 +1,1 @@
+{"name": "@repo/test-config", "version": "1.0.0", "type": "module", "main": "index.js", "scripts": {"test": "vitest", "test:run": "vitest run"}, "devDependencies": {"@repo/typescript-config": "workspace:*", "vitest": "^1.0.0", "@types/express": "^5.0.3"}, "dependencies": {"express": "^5.0.3"}, "exports": {".": "./index.js"}}

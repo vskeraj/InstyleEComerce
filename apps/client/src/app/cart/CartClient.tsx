@@ -10,11 +10,6 @@ import { useRouter, useSearchParams } from "next/navigation";
 import { useState } from "react";
 
 /* këtu vazhdon KREJT kodi yt i cart-it */
-export default function CartClient() {
-  // ...
-}
-=
-
 const steps = [
   {
     id: 1,
@@ -34,7 +29,7 @@ export default function CartClient() {
   const searchParams = useSearchParams();
   const router = useRouter();
   const [currentStep, setCurrentStep] = useState(1);
-  const { items, removeFromCart, updateQuantity, clearCart } = useCartStore();
+  const { removeFromCart, clearCart } = useCartStore();
 
   // Rest of your existing cart logic here
   // ...
