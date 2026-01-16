@@ -29,7 +29,7 @@ const steps = [
 // const cartItems: CartItemsType = [
 //   {
 //     id: 1,
-//     name: "Adidas CoreFit T-Shirt",
+//     name: " CoreFit T-Shirt",
 //     shortDescription:
 //       "Lorem ipsum dolor sit amet consect adipisicing elit lorem ipsum dolor sit.",
 //     description:

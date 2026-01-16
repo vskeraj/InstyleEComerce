@@ -5,7 +5,7 @@ import { Badge } from "./ui/badge";
 const popularProducts = [
   {
     id: 1,
-    name: "Adidas CoreFit T-Shirt",
+    name: "Basic T-Shirt",
     shortDescription:
       "Lorem ipsum dolor sit amet consect adipisicing elit lorem ipsum dolor sit.",
     description:
@@ -14,14 +14,14 @@ const popularProducts = [
     sizes: ["s", "m", "l", "xl", "xxl"],
     colors: ["gray", "purple", "green"],
     images: {
-      gray: "/products/1g.png",
-      purple: "/products/1p.png",
-      green: "/products/1gr.png",
+      gray: "/products/Graytshirt.png",
+      purple: "/products/Purpletshirt.png",
+      green: "/products/Greentshirt.png",
     },
   },
   {
     id: 2,
-    name: "Puma Ultra Warm Zip",
+    name: "Basic Hoodie",
     shortDescription:
       "Lorem ipsum dolor sit amet consect adipisicing elit lorem ipsum dolor sit.",
     description:
@@ -29,11 +29,11 @@ const popularProducts = [
     price: 59.9,
     sizes: ["s", "m", "l", "xl"],
     colors: ["gray", "green"],
-    images: { gray: "/products/2g.png", green: "/products/2gr.png" },
+    images: { gray: "/products/Grayhoodie.png", green: "/products/Greenhodie1.png" },
   },
   {
     id: 3,
-    name: "Nike Air Essentials Pullover",
+    name: "Three-Color Pullover",
     shortDescription:
       "Lorem ipsum dolor sit amet consect adipisicing elit lorem ipsum dolor sit.",
     description:
@@ -49,7 +49,7 @@ const popularProducts = [
   },
   {
     id: 4,
-    name: "Nike Dri Flex T-Shirt",
+    name: "Plain T-Shirts",
     shortDescription:
       "Lorem ipsum dolor sit amet consect adipisicing elit lorem ipsum dolor sit.",
     description:
@@ -61,7 +61,7 @@ const popularProducts = [
   },
   {
     id: 5,
-    name: "Under Armour StormFleece",
+    name: "Color hoodie",
     shortDescription:
       "Lorem ipsum dolor sit amet consect adipisicing elit lorem ipsum dolor sit.",
     description:

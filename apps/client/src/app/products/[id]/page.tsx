@@ -5,7 +5,7 @@ import Image from "next/image";
 // TEMPORARY
 const product: ProductType = {
   id: 1,
-  name: "Adidas CoreFit T-Shirt",
+  name: "Basic T-Shirt",
   shortDescription:
     "Lorem ipsum dolor sit amet consect adipisicing elit lorem ipsum dolor sit.",
   description:
@@ -14,9 +14,9 @@ const product: ProductType = {
   sizes: ["xs", "s", "m", "l", "xl"],
   colors: ["gray", "purple", "green"],
   images: {
-    gray: "/products/1g.png",
-    purple: "/products/1p.png",
-    green: "/products/1gr.png",
+    gray: "/products/Graytshirt.png",
+    purple: "/products/Purpletshirt.png",
+    green: "/products/Greentshirt.png",
   },
 };
 
