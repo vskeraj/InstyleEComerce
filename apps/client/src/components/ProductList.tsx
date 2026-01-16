@@ -8,7 +8,7 @@ import Filter from "./Filter";
 const products: ProductsType = [
   {
     id: 1,
-    name: "Adidas CoreFit T-Shirt",
+    name: "Basic T-Shirt",
     shortDescription:
       "Lorem ipsum dolor sit amet consect adipisicing elit lorem ipsum dolor sit.",
     description:
@@ -17,14 +17,14 @@ const products: ProductsType = [
     sizes: ["s", "m", "l", "xl", "xxl"],
     colors: ["gray", "purple", "green"],
     images: {
-      gray: "/products/1g.png",
-      purple: "/products/1p.png",
-      green: "/products/1gr.png",
+      gray: "/products/Graytshirt.png",
+      purple: "/products/Purpletshirt.png",
+      green: "/products/Greentshirt.png",
     },
   },
   {
     id: 2,
-    name: "Puma Ultra Warm Zip",
+    name: "Basic Hoodie",
     shortDescription:
       "Lorem ipsum dolor sit amet consect adipisicing elit lorem ipsum dolor sit.",
     description:
@@ -32,11 +32,11 @@ const products: ProductsType = [
     price: 59.9,
     sizes: ["s", "m", "l", "xl"],
     colors: ["gray", "green"],
-    images: { gray: "/products/2g.png", green: "/products/2gr.png" },
+    images: { gray: "/products/Grayhoodie.png", green: "/products/Greenhodie1.png" },
   },
   {
     id: 3,
-    name: "Nike Air Essentials Pullover",
+    name: "Three-Color Pullover",
     shortDescription:
       "Lorem ipsum dolor sit amet consect adipisicing elit lorem ipsum dolor sit.",
     description:
@@ -52,7 +52,7 @@ const products: ProductsType = [
   },
   {
     id: 4,
-    name: "Nike Dri Flex T-Shirt",
+    name: "Plain T-Shirts",
     shortDescription:
       "Lorem ipsum dolor sit amet consect adipisicing elit lorem ipsum dolor sit.",
     description:
@@ -64,7 +64,7 @@ const products: ProductsType = [
   },
   {
     id: 5,
-    name: "Under Armour StormFleece",
+    name: "Color hoodie",
     shortDescription:
       "Lorem ipsum dolor sit amet consect adipisicing elit lorem ipsum dolor sit.",
     description:
@@ -80,7 +80,7 @@ const products: ProductsType = [
   },
   {
     id: 6,
-    name: "Nike Air Max 270",
+    name: "Nike Air Force 1",
     shortDescription:
       "Lorem ipsum dolor sit amet consect adipisicing elit lorem ipsum dolor sit.",
     description:
@@ -88,7 +88,7 @@ const products: ProductsType = [
     price: 59.9,
     sizes: ["40", "42", "43", "44"],
     colors: ["gray", "white"],
-    images: { gray: "/products/6g.png", white: "/products/6w.png" },
+    images: { gray: "/products/NikeGray.png", white: "/products/NikeWhite1.png" },
   },
   {
     id: 7,
@@ -104,7 +104,7 @@ const products: ProductsType = [
   },
   {
     id: 8,
-    name: "Levi’s Classic Denim",
+    name: "Classic Denim",
     shortDescription:
       "Lorem ipsum dolor sit amet consect adipisicing elit lorem ipsum dolor sit.",
     description:
