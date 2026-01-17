@@ -34,6 +34,7 @@ const products: ProductsType = [
     colors: ["gray", "green"],
     images: { gray: "/products/Grayhoodie.png", green: "/products/Greenhodie1.png" },
   },
+  
   {
     id: 3,
     name: "Three-Color Pullover",
@@ -88,7 +89,7 @@ const products: ProductsType = [
     price: 59.9,
     sizes: ["40", "42", "43", "44"],
     colors: ["gray", "white"],
-    images: { gray: "/products/NikeGray.png", white: "/products/NikeWhite1.png" },
+    images: { gray: "/products/NikeGray.png", white: "/products/Grey2.png" },
   },
   {
     id: 7,
@@ -114,6 +115,79 @@ const products: ProductsType = [
     colors: ["blue", "green"],
     images: { blue: "/products/8b.png", green: "/products/8gr.png" },
   },
+  {
+    id: 9,
+    name: "Earrings",
+    shortDescription:
+      "Lorem ipsum dolor sit amet consect adipisicing elit lorem ipsum dolor sit.",
+    description:
+      "Lorem ipsum dolor sit amet consect adipisicing elit lorem ipsum dolor sit. Lorem ipsum dolor sit amet consect adipisicing elit lorem ipsum dolor sit. Lorem ipsum dolor sit amet consect adipisicing elit lorem ipsum dolor sit.",
+    price: 29.9,
+    sizes: ["s", "m", "l"],
+    colors: ["white",],
+    images: { white: "/products/Earrings.webp" },
+  },
+    {
+    id: 10,
+    name: "Necklace",
+    shortDescription:
+      "Lorem ipsum dolor sit amet consect adipisicing elit lorem ipsum dolor sit.",
+    description:
+      "Lorem ipsum dolor sit amet consect adipisicing elit lorem ipsum dolor sit. Lorem ipsum dolor sit amet consect adipisicing elit lorem ipsum dolor sit. Lorem ipsum dolor sit amet consect adipisicing elit lorem ipsum dolor sit.",
+    price: 50.0,
+    sizes: ["s", "m", "l"],
+    colors: ["white", "pink"],
+    images: { white: "/products/Snecklace.jpg", pink: "/products/Snecklace2.png" },
+  },
+      {
+    id: 11,
+    name: "Cherry-Earrings",
+    shortDescription:
+      "Lorem ipsum dolor sit amet consect adipisicing elit lorem ipsum dolor sit.",
+    description:
+      "Lorem ipsum dolor sit amet consect adipisicing elit lorem ipsum dolor sit. Lorem ipsum dolor sit amet consect adipisicing elit lorem ipsum dolor sit. Lorem ipsum dolor sit amet consect adipisicing elit lorem ipsum dolor sit.",
+    price: 29.9,
+    sizes: ["s", "m", "l"],
+    colors: ["white", "red"],
+    images: { white: "/products/Cherry.webp", red: "/products/Red.png" },
+  },
+       {
+    id: 12,
+    name: "Purse",
+    shortDescription:
+      "Lorem ipsum dolor sit amet consect adipisicing elit lorem ipsum dolor sit.",
+    description:
+      "Lorem ipsum dolor sit amet consect adipisicing elit lorem ipsum dolor sit. Lorem ipsum dolor sit amet consect adipisicing elit lorem ipsum dolor sit. Lorem ipsum dolor sit amet consect adipisicing elit lorem ipsum dolor sit.",
+    price: 39.9,
+    sizes: ["s", "m", "l"],
+    colors: ["red"],
+    images: { red: "/products/Purse.webp" },
+  },
+         {
+    id: 13,
+    name: "Dress",
+    shortDescription:
+      "Lorem ipsum dolor sit amet consect adipisicing elit lorem ipsum dolor sit.",
+    description:
+      "Lorem ipsum dolor sit amet consect adipisicing elit lorem ipsum dolor sit. Lorem ipsum dolor sit amet consect adipisicing elit lorem ipsum dolor sit. Lorem ipsum dolor sit amet consect adipisicing elit lorem ipsum dolor sit.",
+    price: 69.9,
+    sizes: ["s", "m", "l"],
+    colors: ["black"],
+    images: { black: "/products/BD.avif" },
+  },
+  {
+      id: 14,
+    name: "Gloves",
+    shortDescription:
+      "Lorem ipsum dolor sit amet consect adipisicing elit lorem ipsum dolor sit.",
+    description:
+      "Lorem ipsum dolor sit amet consect adipisicing elit lorem ipsum dolor sit. Lorem ipsum dolor sit amet consect adipisicing elit lorem ipsum dolor sit. Lorem ipsum dolor sit amet consect adipisicing elit lorem ipsum dolor sit.",
+    price: 69.9,
+    sizes: ["s", "m", "l"],
+    colors: ["gray"],
+    images: { gray: "/products/Gloves.jpg" },
+  },
+  
 ];
 
 const ProductList = ({ category,params }: { category: string, params:"homepage" | "products" }) => {
