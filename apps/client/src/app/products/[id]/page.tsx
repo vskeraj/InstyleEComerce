@@ -20,6 +20,7 @@ const products: ProductType[] = [
       purple: "/products/Purpletshirt.png",
       green: "/products/Greentshirt.png",
     },
+    category:"tops",
   },
   {
     id: 2,
@@ -35,6 +36,7 @@ const products: ProductType[] = [
       gray: "/products/Grayhoodie.png",
       green: "/products/Greenhodie1.png",
     },
+    category:"tops",
   },
   {
     id: 3,
@@ -51,6 +53,7 @@ const products: ProductType[] = [
       blue: "/products/3b.png",
       black: "/products/3bl.png",
     },
+    category:"tops",
   },
   {
     id: 4,
@@ -66,6 +69,7 @@ const products: ProductType[] = [
       white: "/products/4w.png",
       pink: "/products/4p.png",
     },
+    category:"tops",
   },
   {
     id: 5,
@@ -82,6 +86,7 @@ const products: ProductType[] = [
       orange: "/products/5o.png",
       black: "/products/5bl.png",
     },
+    category:"tops",
   },
   {
     id: 6,
@@ -97,6 +102,7 @@ const products: ProductType[] = [
       gray: "/products/NikeGray.png",
       white: "/products/Grey2.png",
     },
+    category:"shoes",
   },
   {
     id: 7,
@@ -112,6 +118,7 @@ const products: ProductType[] = [
       gray: "/products/7g.png",
       pink: "/products/7p.png",
     },
+    category:"shoes",
   },
   {
     id: 8,
@@ -127,6 +134,7 @@ const products: ProductType[] = [
       blue: "/products/8b.png",
       green: "/products/8gr.png",
     },
+    category:"jackets",
   },
   {
     id: 9,
@@ -139,6 +147,7 @@ const products: ProductType[] = [
     sizes: ["s", "m", "l"],
     colors: ["white"],
     images: { white: "/products/Earrings.webp" },
+    category:"accessories",
   },
     {
     id: 10,
@@ -151,6 +160,7 @@ const products: ProductType[] = [
     sizes: ["s", "m", "l"],
     colors: ["white", "pink"],
     images: { white: "/products/Snecklace.jpg", pink: "/products/Snecklace2.png" },
+    category:"accessories",
   },
       {
     id: 11,
@@ -163,6 +173,7 @@ const products: ProductType[] = [
     sizes: ["s", "m", "l"],
     colors: ["white", "red"],
     images: { white: "/products/Cherry.webp", red: "/products/Red.png" },
+    category:"accessories",
   },
        {
     id: 12,
@@ -175,6 +186,7 @@ const products: ProductType[] = [
     sizes: ["s", "m", "l"],
     colors: ["red"],
     images: { red: "/products/Purse.webp" },
+     category:"bags",
   },
          {
     id: 13,
@@ -187,6 +199,7 @@ const products: ProductType[] = [
     sizes: ["s", "m", "l"],
     colors: ["black"],
     images: { black: "/products/BD.avif" },
+     category:"dresses",
   },
   {
       id: 14,
@@ -199,6 +212,7 @@ const products: ProductType[] = [
     sizes: ["s", "m", "l"],
     colors: ["gray"],
     images: { gray: "/products/Gloves.jpg" },
+     category:"gloves",
   },
 ];
 

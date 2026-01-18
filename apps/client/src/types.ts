@@ -9,6 +9,16 @@ export type ProductType = {
   sizes: [string, ...string[]];
   colors: [string, ...string[]];
   images: Record<string, string>;
+
+    category:
+    | "all"
+    | "tops"
+    | "shoes"
+    | "accessories"
+    | "bags"
+    | "dresses"
+    | "jackets"
+    | "gloves";
 };
 
 export type ProductsType = ProductType[];

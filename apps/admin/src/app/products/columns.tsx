@@ -26,6 +26,9 @@ export type Product = {
   sizes: string[];
   colors: string[];
   images: Record<string, string>;
+
+  category: "tops" | "shoes" | "accessories" | "bags" | "dresses" | "jackets" | "gloves";
+
 };
 
 export const columns: ColumnDef<Product>[] = [

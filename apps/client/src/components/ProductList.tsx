@@ -1,8 +1,11 @@
+"use client";
 import { ProductsType } from "@/types";
 import Categories from "./Categories";
 import ProductCard from "./ProductCard";
 import Link from "next/link";
 import Filter from "./Filter";
+import { useSearchParams } from "next/navigation";
+
 
 // TEMPORARY
 const products: ProductsType = [
@@ -21,6 +24,7 @@ const products: ProductsType = [
       purple: "/products/Purpletshirt.png",
       green: "/products/Greentshirt.png",
     },
+    category: "tops",
   },
   {
     id: 2,
@@ -33,6 +37,7 @@ const products: ProductsType = [
     sizes: ["s", "m", "l", "xl"],
     colors: ["gray", "green"],
     images: { gray: "/products/Grayhoodie.png", green: "/products/Greenhodie1.png" },
+    category:"tops",
   },
   
   {
@@ -50,6 +55,7 @@ const products: ProductsType = [
       blue: "/products/3b.png",
       black: "/products/3bl.png",
     },
+    category:"tops",
   },
   {
     id: 4,
@@ -62,7 +68,9 @@ const products: ProductsType = [
     sizes: ["s", "m", "l"],
     colors: ["white", "pink"],
     images: { white: "/products/4w.png", pink: "/products/4p.png" },
+    category:"tops",
   },
+
   {
     id: 5,
     name: "Color hoodie",
@@ -78,6 +86,7 @@ const products: ProductsType = [
       orange: "/products/5o.png",
       black: "/products/5bl.png",
     },
+    category:"tops",
   },
   {
     id: 6,
@@ -90,6 +99,7 @@ const products: ProductsType = [
     sizes: ["40", "42", "43", "44"],
     colors: ["gray", "white"],
     images: { gray: "/products/NikeGray.png", white: "/products/Grey2.png" },
+    category:"shoes",
   },
   {
     id: 7,
@@ -102,6 +112,7 @@ const products: ProductsType = [
     sizes: ["40", "42", "43"],
     colors: ["gray", "pink"],
     images: { gray: "/products/7g.png", pink: "/products/7p.png" },
+    category:"shoes",
   },
   {
     id: 8,
@@ -114,6 +125,7 @@ const products: ProductsType = [
     sizes: ["s", "m", "l"],
     colors: ["blue", "green"],
     images: { blue: "/products/8b.png", green: "/products/8gr.png" },
+    category:"jackets",
   },
   {
     id: 9,
@@ -126,6 +138,7 @@ const products: ProductsType = [
     sizes: ["s", "m", "l"],
     colors: ["white",],
     images: { white: "/products/Earrings.webp" },
+    category:"accessories",
   },
     {
     id: 10,
@@ -138,6 +151,7 @@ const products: ProductsType = [
     sizes: ["s", "m", "l"],
     colors: ["white", "pink"],
     images: { white: "/products/Snecklace.jpg", pink: "/products/Snecklace2.png" },
+    category:"accessories",
   },
       {
     id: 11,
@@ -150,6 +164,7 @@ const products: ProductsType = [
     sizes: ["s", "m", "l"],
     colors: ["white", "red"],
     images: { white: "/products/Cherry.webp", red: "/products/Red.png" },
+    category:"accessories",
   },
        {
     id: 12,
@@ -162,6 +177,7 @@ const products: ProductsType = [
     sizes: ["s", "m", "l"],
     colors: ["red"],
     images: { red: "/products/Purse.webp" },
+    category:"bags",
   },
          {
     id: 13,
@@ -174,6 +190,7 @@ const products: ProductsType = [
     sizes: ["s", "m", "l"],
     colors: ["black"],
     images: { black: "/products/BD.avif" },
+    category:"dresses",
   },
   {
       id: 14,
@@ -186,22 +203,55 @@ const products: ProductsType = [
     sizes: ["s", "m", "l"],
     colors: ["gray"],
     images: { gray: "/products/Gloves.jpg" },
+    category:"gloves",
   },
   
 ];
+const ProductList = ({
+  category,
+  params,
+}: {
+  category?: string;
+  params: "homepage" | "products";
+}) => {
+  const searchParams = useSearchParams();
+  const sort = searchParams.get("sort");
 
-const ProductList = ({ category,params }: { category: string, params:"homepage" | "products" }) => {
+let filteredProducts =
+  category && category !== "all"
+    ? products.filter((p) => p.category === category)
+    : [...products];
+
+if (sort === "asc") {
+  filteredProducts.sort((a, b) => a.price - b.price);
+}
+
+if (sort === "desc") {
+  filteredProducts.sort((a, b) => b.price - a.price);
+}
+
+
+
   return (
     <div className="w-full">
       <Categories />
       {params === "products" && <Filter/>}
       <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-12">
-        {products.map((product) => (
+        {filteredProducts.map((product) => (
+
           <ProductCard key={product.id} product={product} />
         ))}
       </div>
       <Link
-        href={category ? `/products/?category=${category}` : "/products"}
+        href={
+  category
+    ? `/products?category=${category}${sort ? `&sort=${sort}` : ""}`
+    : sort
+    ? `/products?sort=${sort}`
+    : "/products"
+}
+
+
         className="flex justify-end mt-4 underline text-sm text-gray-500"
       >
         View all products
