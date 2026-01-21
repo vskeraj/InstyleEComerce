@@ -126,27 +126,32 @@ const CardList = ({ title }: { title: string }) => {
       <h1 className="text-lg font-medium mb-6">{title}</h1>
       <div className="flex flex-col gap-2">
         {title === "Popular Products"
-          ? popularProducts.map((item) => (
-              <Card
-                key={item.id}
-                className="flex-row items-center justify-between gap-4 p-4"
-              >
-                <div className="w-12 h-12 rounded-sm relative overflow-hidden">
-                  <Image
-                    src={Object.values(item.images)[0] || ""}
-                    alt={item.name}
-                    fill
-                    className="object-cover"
-                  />
-                </div>
-                <CardContent className="flex-1 p-0">
-                  <CardTitle className="text-sm font-medium">
-                    {item.name}
-                  </CardTitle>
-                </CardContent>
-                <CardFooter className="p-0">${item.price}K</CardFooter>
-              </Card>
-            ))
+          ? popularProducts.map((item) => {
+  const firstColor = item.colors?.[0];
+  const imgSrc =
+    (firstColor && item.images[firstColor as keyof typeof item.images]) ||
+    Object.values(item.images)[0];
+
+  return (
+    <Card
+      key={item.id}
+      className="flex flex-row items-center justify-between gap-4 p-4"
+    >
+      <div className="w-12 h-12 rounded-sm relative overflow-hidden">
+        <Image src={imgSrc} alt={item.name} fill className="object-cover" />
+      </div>
+
+      <CardContent className="flex-1 p-0">
+        <CardTitle className="text-sm font-medium">
+          {item.name}
+        </CardTitle>
+      </CardContent>
+
+      <CardFooter className="p-0">${item.price}K</CardFooter>
+    </Card>
+  );
+})
+
           : latestTransactions.map((item) => (
               <Card
                 key={item.id}

@@ -18,7 +18,7 @@ const getData = async (): Promise<Product[]> => {
         purple: "/products/Purpletshirt.png",
         green: "/products/Greentshirt.png",
       },
-      category:"tops";
+      category:"tops",
     },
     {
       id: 2,
@@ -31,7 +31,7 @@ const getData = async (): Promise<Product[]> => {
       sizes: ["s", "m", "l", "xl"],
       colors: ["gray", "green"],
       images: { gray: "/products/Grayhoodie.png", green: "/products/Greenhodie1.png" },
-      category:"tops";
+      category:"tops",
     },
     {
       id: 3,
@@ -48,7 +48,7 @@ const getData = async (): Promise<Product[]> => {
         blue: "/products/3b.png",
         black: "/products/3bl.png",
       },
-      category:"tops";
+      category:"tops",
     },
     {
       id: 4,
@@ -61,7 +61,7 @@ const getData = async (): Promise<Product[]> => {
       sizes: ["s", "m", "l"],
       colors: ["white", "pink"],
       images: { white: "/products/4w.png", pink: "/products/4p.png" },
-      category:"tops";
+      category:"tops",
     },
     {
       id: 5,
@@ -78,7 +78,7 @@ const getData = async (): Promise<Product[]> => {
         orange: "/products/5o.png",
         black: "/products/5bl.png",
       },
-      category:"tops";
+      category:"tops",
     },
     {
       id: 6,
@@ -91,7 +91,7 @@ const getData = async (): Promise<Product[]> => {
       sizes: ["40", "42", "43", "44"],
       colors: ["gray", "white"],
       images: { gray: "/products/NikeGray.png", white: "/products/NikeWhite.png" },
-      category:"shoes";
+      category:"shoes",
     },
     {
       id: 7,
@@ -104,7 +104,7 @@ const getData = async (): Promise<Product[]> => {
       sizes: ["40", "42", "43"],
       colors: ["gray", "pink"],
       images: { gray: "/products/7g.png", pink: "/products/7p.png" },
-      category:"shoes";
+      category:"shoes",
     },
     {
       id: 8,
@@ -117,7 +117,7 @@ const getData = async (): Promise<Product[]> => {
       sizes: ["s", "m", "l"],
       colors: ["blue", "green"],
       images: { blue: "/products/8b.png", green: "/products/8gr.png" },
-      category:"jackets";
+      category:"jackets",
     },
     {
     id: 9,
@@ -130,7 +130,7 @@ const getData = async (): Promise<Product[]> => {
     sizes: ["s", "m", "l"],
     colors: ["white"],
     images: { white: "/products/Earrings.webp" },
-    category:"accessories";
+    category:"accessories",
   },
     {
     id: 10,
@@ -143,7 +143,7 @@ const getData = async (): Promise<Product[]> => {
     sizes: ["s", "m", "l"],
     colors: ["white", "pink"],
     images: { white: "/products/Snecklace.jpg", pink: "/products/Snecklace2.png" },
-    category:"accessories";
+    category:"accessories",
   },
       {
     id: 11,
@@ -156,7 +156,7 @@ const getData = async (): Promise<Product[]> => {
     sizes: ["s", "m", "l"],
     colors: ["white", "red"],
     images: { white: "/products/Cherry.webp", red: "/products/Red.png" },
-    category:"accessories";
+    category:"accessories",
   },
        {
     id: 12,
@@ -169,7 +169,7 @@ const getData = async (): Promise<Product[]> => {
     sizes: ["s", "m", "l"],
     colors: ["red"],
     images: { red: "/products/Purse.webp" },
-    category:"bags";
+    category:"bags",
   },
          {
     id: 13,
@@ -182,7 +182,7 @@ const getData = async (): Promise<Product[]> => {
     sizes: ["s", "m", "l"],
     colors: ["black"],
     images: { black: "/products/BD.avif" },
-    category:"dresses";
+    category:"dresses",
   },
   {
       id: 14,
@@ -195,7 +195,7 @@ const getData = async (): Promise<Product[]> => {
     sizes: ["s", "m", "l"],
     colors: ["gray"],
     images: { gray: "/products/Gloves.jpg" },
-    category:"gloves";
+    category:"gloves",
   },
   ];
 };
