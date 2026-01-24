@@ -1,0 +1,1 @@
+{"name": "@repo/api-docs", "version": "0.0.1", "type": "module", "scripts": {"build": "tsc", "check-types": "tsc --noEmit"}, "devDependencies": {"@repo/typescript-config": "workspace:*", "@types/node": "^24.3.1", "typescript": "5.9.2"}, "exports": {".": "./dist/index.js"}, "dependencies": {"swagger-jsdoc": "^6.2.8", "swagger-ui-express": "^5.0.0"}}

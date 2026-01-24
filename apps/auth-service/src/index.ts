@@ -2,9 +2,11 @@ import express, { NextFunction, Request, Response } from "express";
 import cors from "cors";
 import { clerkMiddleware } from "@clerk/express";
 import { shouldBeAdmin } from "./middleware/authMiddleware.js";
+import { requireMFA, validateInput } from "./middleware/mfaMiddleware.js";
 import userRoute from "./routes/user.route";
 import { producer } from "./utils/kafka.js";
 import { securityMiddleware, auditLogger } from "@repo/security-middleware";
+import { specs, swaggerUi } from "@repo/api-docs";
 
 const app = express();
 app.use(
@@ -27,6 +29,16 @@ app.get("/health", (req: Request, res: Response) => {
 });
 
 app.use("/api/v1/users", shouldBeAdmin, userRoute);
+
+app.post("/api/v1/secure-action", requireMFA, (req: Request, res: Response) => {
+  return res.status(200).json({
+    message: "Secure action completed with MFA verification",
+    timestamp: Date.now()
+  });
+});
+
+// API Documentation
+app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(specs));
 
 app.use((err: any, req: Request, res: Response, next: NextFunction) => {
   console.log(err);
